@@ -33,5 +33,15 @@ function setClock() { //실시간 시간
 };
 
 function infiniteMsg() {
-	
+	$(".phone .msg").addClass("on");
+	setInterval (function() {
+		setTimeout(function() {
+			$(".phone .msg").removeClass("off");
+			$(".phone .msg").addClass("on");
+		}, 0)
+		setTimeout(function() {
+			$(".phone .msg").removeClass("on");
+			$(".phone .msg").addClass("off");
+		}, 6000)
+	}, 10000);
 };
