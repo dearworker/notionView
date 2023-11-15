@@ -9,14 +9,15 @@
 	<script src="./../asset/js/jquery-3.4.0.min.js"></script>
 	<script src="./../asset/js/ui.common.js"></script>
 	<style>
-		.phone {position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; max-width: 425px; width:100%; box-sizing: border-box; padding: 10px; padding-top: 650px; border-radius: 90px; margin: 0 auto;}
-		.phone::before {content: ""; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 98.6%; background: url("./../asset/img/phone.png") top center/100% 100% no-repeat; z-index: 1;}
+		.phone {position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; max-width: 425px; width:100%; box-sizing: border-box; padding: 10px; padding-top: 100vh; border-radius: 90px; margin: 0 auto;}
+		.phone::before {content: ""; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 98.6%; background: url("./../asset/img/phone_bg.png") top center/100% 100% no-repeat; mix-blend-mode: soft-light; z-index: 1;}
+		.phone::after {content: ""; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 98.6%; background: url("./../asset/img/phone.png") top center/100% 100% no-repeat; z-index: 10;}
 		.phone_cont {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; justify-content: space-between; width: 90%; height: 95%; background-color: #2F2F2F; border-radius: 10px;}
 		.phone .txt_wrap {width: 100%; text-align: center; color: #FFFFFF;}
 		.phone .txt_wrap .time_wrap {margin:113px auto 0;}
 		.phone .txt_wrap .time_wrap .am_pm_txt {font-size: 24px; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
-		.phone .txt_wrap .time_wrap .time {font-size: 60px; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
-		.phone .txt_wrap .time_wrap .date {font-size: 16px; font-weight: 300; letter-spacing: 0.64px;}
+		.phone .txt_wrap .time_wrap .time {font-size: 60px; letter-spacing: -1px; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
+		.phone .txt_wrap .time_wrap .date {font-size: 16px; font-weight: 300;}
 
 		.phone .msg_wrap {width: 80%; margin: 36px auto 0;}
 		.phone .msg_wrap .sys_msg {font-weight: 200; margin-bottom: 20px;}
@@ -24,7 +25,9 @@
 		.phone .msg_wrap .msg.msg01.on {animation: fadein 1s ease-in-out forwards;}
 		.phone .msg_wrap .msg.msg02.on {animation: fadein 1s 1.5s ease-in-out forwards;}
 		.phone .msg_wrap .msg.off {animation: fadeout 1s ease-in-out forwards;}
-		.phone .msg_wrap .msg i {display: block; width: 20px; height: 20px; background-color: #FFFFFF; margin-right: 10px;}
+		.phone .msg_wrap .msg i {display: block; width: 20px; height: 20px; background-color: #FFFFFF; margin-right: 10px; background: center/100% no-repeat;}
+		.phone .msg_wrap .msg i.message {background-image: url("./../asset/img/ico_msg.svg");}
+		.phone .msg_wrap .msg i.warning {background-image: url("./../asset/img/ico_msg.svg");}
 		.phone .msg_wrap .msg p {width: calc(100% - 30px); white-space:nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 12px; line-height: 1; text-align: left;}
 
 		.phone .hand_mark {width: 60px; margin: 0 auto 70px;}

@@ -42,6 +42,6 @@ function infiniteMsg() {
 		setTimeout(function() {
 			$(".phone .msg").removeClass("on");
 			$(".phone .msg").addClass("off");
-		}, 6000)
-	}, 10000);
+		}, 15000)
+	}, 60000);
 };
