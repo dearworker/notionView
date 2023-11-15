@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>휴대폰</title>
+
+	<link rel="stylesheet" href="./../asset/css/reset.css">
+	<script src="./../asset/js/jquery-3.4.0.min.js"></script>
+	<script src="./../asset/js/ui.common.js"></script>
+	<style>
+		.phone {position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; min-width: 375px; width:100%; box-sizing: border-box; padding: 10px; padding-top: 762px;  border-radius: 90px;}
+		.phone::before {content: ""; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 100%; background: url("./../asset/img/phone.png") top center/100% no-repeat; z-index: 1;}
+		.phone_cont {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; justify-content: space-between; width: 90%; height: 95%; background-color: #2F2F2F; border-radius: 10px;}
+		.phone .txt_wrap {width: 100%; text-align: center; color: #FFFFFF;}
+		.phone .txt_wrap .time_wrap {margin:113px auto 0;}
+		.phone .txt_wrap .time_wrap .am_pm_txt {font-size: 24px; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
+		.phone .txt_wrap .time_wrap .time {font-size: 60px; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
+		.phone .txt_wrap .time_wrap .date {font-size: 16px; font-weight: 300; letter-spacing: 0.64px;}
+
+		.phone .msg_wrap {width: 80%; margin: 36px auto 0;}
+		.phone .msg_wrap .sys_msg {font-weight: 200; margin-bottom: 20px;}
+		.phone .msg_wrap .msg {display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box; padding: 16px 20px; border-radius: 8px; background-color:#68665f; margin-top: 10px; opacity: 0; transition: all 1s;}
+		.phone .msg_wrap .msg.msg01.on {animation: ani_up 1s ease-in-out forwards;}
+		.phone .msg_wrap .msg.msg02.on {animation: ani_up 1s 1.5s ease-in-out forwards;}
+		.phone .msg_wrap .msg i {display: block; width: 20px; height: 20px; background-color: #FFFFFF; margin-right: 10px;}
+		.phone .msg_wrap .msg p {width: calc(100% - 30px); white-space:nowrap; overflow: hidden; text-overflow: ellipsis; line-height: 1;}
+
+		.phone .hand_mark {width: 60px; margin: 0 auto 70px;}
+		.phone .hand_mark img {display: block; width: 100%;}
+		@keyframes ani_up {
+			0% {
+				opacity: 0;
+				transform: translateY(-20px);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<div class="phone">
+			<div class="phone_cont">
+				<div class="txt_wrap">
+					<div class="time_wrap">
+						<span class="am_pm_txt"></span>
+						<h1 class="time"></h1>
+						<div class="date"></div>
+					</div>
+					<div class="msg_wrap">
+						<div class="msg_cont">
+							<p class="sys_msg">읽지 않은 기록이 존재합니다.</p>
+							<div class="msg msg01">
+								<i class="ico message"></i>
+								<p>새 메세지가 도착했습니다.</p>
+							</div>
+							<div class="msg msg02">
+								<i class="ico message"></i>
+								<p>소프트웨어 업데이트 지연 경과 +999999경과</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="hand_mark"><img src="./../asset/img/hand_mark.svg" alt=""></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.onload = function() {
+			setClock(); // 실시간 시간 : 최초
+			setInterval(setClock, 1000); // 실시간 시간 : 1초마다 변경
+		}
+	</script>
+</body>
+</html>
