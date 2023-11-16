@@ -9,28 +9,28 @@
 	<script src="./../asset/js/jquery-3.4.0.min.js"></script>
 	<script src="./../asset/js/ui.common.js"></script>
 	<style>
-		.phone {position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; max-width: 161.5px; width:100%; box-sizing: border-box; padding: 5px; height: 100%; max-height: 320px; border-radius: 50px; margin: 0 auto;}
+		.phone {position: relative; display: flex; flex-direction: column; align-items: center; justify-content: space-between; width:100vw; box-sizing: border-box; padding: 1.35vh 2.67vw; height: 100vh; border-radius: 90px; margin: 0 auto;}
 		.phone::before {content: ""; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 98.6%; background: url("./../asset/img/phone_bg.png") top center/100% 100% no-repeat; mix-blend-mode: soft-light; z-index: 1;}
 		.phone::after {content: ""; position: absolute; display: block; top: 0; left: 0; width: 100%; height: 98.6%; background: url("./../asset/img/phone.png") top center/100% 100% no-repeat; z-index: 10;}
 		.phone_cont {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); display: flex; flex-direction: column; align-items: center; justify-content: space-between; width: 90%; height: 95%; background-color: #2F2F2F; border-radius: 10px;}
 		.phone .txt_wrap {width: 100%; text-align: center; color: #FFFFFF;}
-		.phone .txt_wrap .time_wrap {margin: 56.5px auto 0;}
-		.phone .txt_wrap .time_wrap .am_pm_txt {font-size: 12px; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
-		.phone .txt_wrap .time_wrap .time {font-size: 30px; letter-spacing: -1px; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
-		.phone .txt_wrap .time_wrap .date {font-size: 8px; font-weight: 300;}
+		.phone .txt_wrap .time_wrap {margin:15.27vh auto 0;}
+		.phone .txt_wrap .time_wrap .am_pm_txt {font-size: 6.40vw; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
+		.phone .txt_wrap .time_wrap .time {font-size: 16vw; letter-spacing: -0.57vw; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
+		.phone .txt_wrap .time_wrap .date {font-size: 4.27vw; font-weight: 300;}
 
-		.phone .msg_wrap {width: 90%; margin: 18px auto 0;}
-		.phone .msg_wrap .sys_msg {font-size: 8px; font-weight: 200; margin-bottom: 10px;}
-		.phone .msg_wrap .msg {display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box; padding: 8px 6px; border-radius: 4px; background-color:#68665f; margin-top: 5px; opacity: 0;}
+		.phone .msg_wrap {width: 85%; margin: 4.65vh auto 0;}
+		.phone .msg_wrap .sys_msg {font-size: 3.73vw; font-weight: 200; margin-bottom: 2.73vh;}
+		.phone .msg_wrap .msg {display: flex; align-items: center; justify-content: center; width: 100%; box-sizing: border-box; padding: 2.16vh 5.33vw; border-radius: 8px; background-color:#68665f; margin-top: 1.35vh; opacity: 0;}
 		.phone .msg_wrap .msg.msg01.on {animation: fadein 1s ease-in-out forwards;}
 		.phone .msg_wrap .msg.msg02.on {animation: fadein 1s 1.5s ease-in-out forwards;}
 		.phone .msg_wrap .msg.off {animation: fadeout 1s ease-in-out forwards;}
-		.phone .msg_wrap .msg i {display: block; width: 10px; height: 10px; background-color: #FFFFFF; margin-right: 5px; background: center/100% no-repeat;}
+		.phone .msg_wrap .msg i {display: block; width: 5.33vw; height: 2.70vh; background-color: #FFFFFF; margin-right: 2.67vw; background: center/100% no-repeat;}
 		.phone .msg_wrap .msg i.message {background-image: url("./../asset/img/ico_msg.svg");}
 		.phone .msg_wrap .msg i.warning {background-image: url("./../asset/img/ico_warning.svg");}
-		.phone .msg_wrap .msg p {width: calc(100% - 15px); white-space:nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 6px; line-height: 1; text-align: left;}
+		.phone .msg_wrap .msg p {width: calc(100% - 8.00vw); white-space:nowrap; overflow: hidden; text-overflow: ellipsis; font-size: 3.20vw; line-height: 1; text-align: left;}
 
-		.phone .hand_mark {width: 30px; margin: 0 auto 25px;}
+		.phone .hand_mark {width: 16.00vw; margin: 0 auto 9.46vh;}
 		.phone .hand_mark img {display: block; width: 100%;}
 		@keyframes fadein {
 			0% {

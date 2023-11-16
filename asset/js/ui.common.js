@@ -10,6 +10,9 @@ function setClock() { //실시간 시간
 		date = modifyNum(dateInfo.getDate()),
 		hour = modifyNum(dateInfo.getHours()),
 		min = modifyNum(dateInfo.getMinutes());
+		
+	const week = ["일", "월", "화", "수", "목", "금", "토",],
+		dayweek = week[dateInfo.getDay()];
 
 	if(hour < 13) {
 		amPm = "오전"
@@ -29,7 +32,7 @@ function setClock() { //실시간 시간
 
 	$(".phone .am_pm_txt").html(amPm);
 	$(".phone .time").html(hour + " : " + min);
-	$(".phone .date").html(year + "년 " + month + "월 " + date + "일");
+	$(".phone .date").html(year + "년 " + month + "월 " + date + "일 " + dayweek + "요일");
 };
 
 function infiniteMsg() {
