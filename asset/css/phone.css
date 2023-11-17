@@ -32,7 +32,7 @@
 
 .phone .txt_wrap .time_wrap {margin:65px auto 0;}
 .phone .txt_wrap .time_wrap .am_pm_txt {font-size: 24px; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
-.phone .txt_wrap .time_wrap .time {font-size: 60px; letter-spacing: -0.57vw; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
+.phone .txt_wrap .time_wrap .time {font-size: 60px; letter-spacing: -1.47px; text-shadow: 0px 4px 0 rgba(0, 0, 0, 0.25);}
 .phone .txt_wrap .time_wrap .date {font-size: 14px; font-weight: 300;}
 
 .phone .msg_wrap {width: 85%; margin: 32px auto 0;}
